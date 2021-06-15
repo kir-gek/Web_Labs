@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css"> 
+    <title>Gekman_Web_1</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="./Mospolytech_logo.jpg" alt="Mospolytech"></a> 
+    </header>
+    <main>
+        <div class="container">
+            <h1>Flex-row</h1>
+            <div class="menurowcard">
+                <div class="card_row water">
+                    <h2>вода</h2>
+                </div>
+                <div class="card_row lightning">
+                    <h2>молния</h2>
+                </div>
+                <div class="card_row ground">
+                    <h2>земля</h2>
+                </div>
+                <div class="card_row wind">
+                    <h2>ветер</h2>
+                </div>
+                <div class="card_row fire">
+                    <h2>огонь</h2>
+                </div>
+            </div>
+            <h1>Flex-row-reverse</h1>
+            <div class="menurowcard mrreverse">
+                <div class="card_row water">
+                    <h2>вода</h2>
+                </div>
+                <div class="card_row lightning">
+                    <h2>молния</h2>
+                </div>
+                <div class="card_row ground">
+                    <h2>земля</h2>
+                </div>
+                <div class="card_row wind">
+                    <h2>ветер</h2>
+                </div>
+                <div class="card_row fire">
+                    <h2>огонь</h2>
+                </div>
+            </div>
+            <h1>Flex-column</h1>
+            <div class="menucolumn">
+                <div class="card_column water">
+                    <h2>вода</h2>
+                </div>
+                <div class="card_column lightning">
+                    <h2>молния</h2>
+                </div>
+                <div class="card_column ground">
+                    <h2>земля</h2>
+                </div>
+                <div class="card_column wind">
+                    <h2>ветер</h2>
+                </div>
+                <div class="card_column fire">
+                    <h2>огонь</h2>
+                </div>
+            </div>
+            <h1>justify-content</h1>
+            <h3>center</h3>
+            <div class="menurow justify">
+                <div class="box box_red">      </div>
+                <div class="box box_green">    </div>
+                <div class="box box_blue">     </div>
+                <div class="box box_yellow"></div>
+            </div>
+            <h3>space-between</h3>
+            <div class="menurow space-between">
+                <div class="box box_red">      </div>
+                <div class="box box_green">    </div>
+                <div class="box box_blue">     </div>
+                <div class="box box_yellow"></div>
+            </div>
+            <h3>space-around</h3>
+            <div class="menurow space-around">
+                <div class="box box_red">      </div>
+                <div class="box box_green">    </div>
+                <div class="box box_blue">     </div>
+                <div class="box box_yellow"></div>
+            </div>
+            <h1>align-items</h1>
+            <h3>center+justify-content: center;</h3>
+            <div class="menurow  align">
+                <div class="box box_red">      </div>
+                <div class="box box_green">    </div>
+                <div class="box box_blue">     </div>
+                <div class="box box_yellow"></div>
+            </div>
+            <h3>stretch</h3>
+            <div class="menurow stretch">
+                <div class="box box_red auto">      </div>
+                <div class="box box_green auto">    </div>
+                <div class="box box_blue auto">     </div>
+                <div class="box box_yellow auto"></div>
+            </div>
+            <h3>flex-end</h3>
+            <div class="menurow align-end">
+                <div class="box box_red">      </div>
+                <div class="box box_green">    </div>
+                <div class="box box_blue">     </div>
+                <div class="box box_yellow"></div>
+            </div>
+            <h1>align-self</h1>
+            <h3>1-center 2-stretch<span style="padding: 0px 20px;">&nbsp;</span>   3,4-align item end;</h3>
+            <div class="menurow  align-end">
+                <div class="box box_red selfcenter">      </div>
+                <div class="box box_green auto selfstretch">    </div>
+                <div class="box box_blue">     </div>
+                <div class="box box_yellow"></div>
+            </div>
+            <h1>Flex-grow (1:1:1:1)</h1>
+            <div class="menurow">
+                <div class="box box_red width">      </div>
+                <div class="box box_green width">    </div>
+                <div class="box box_blue width">     </div>
+                <div class="box box_yellow width"></div>
+            </div>
+            <h1>Flex-grow (1:1:3:1)</h1>
+            <div class="menurow">
+                <div class="box box_red width">      </div>
+                <div class="box box_green width">    </div>
+                <div class="box box_blue width3 width">     </div>
+                <div class="box box_yellow width"></div>
+            </div>
+            <h1>Flex-shrink (1:1:0:1)</h1>
+            <div class="menurow constriction">
+                <div class="box box_red width">      </div>
+                <div class="box box_green width">    </div>
+                <div class="box box_blue width shrink3">     </div>
+                <div class="box box_yellow width"></div>
+            </div>
+            <h1>Flex-wrap</h1>
+            <div class="parent">
+                <div class="box box_red wrap">      </div>
+                <div class="box box_green wrap">    </div>
+                <div class="box box_blue wrap">     </div>
+                <div class="box box_yellow wrap"></div>
+                <div class="box box_red wrap">      </div>
+                <div class="box box_green wrap">    </div>
+                <div class="box box_blue wrap">     </div>
+                <div class="box box_yellow wrap"></div>
+                <div class="box box_red wrap">      </div>
+                <div class="box box_green wrap">    </div>
+                <div class="box box_blue wrap">     </div>
+                <div class="box box_yellow wrap"></div>
+                <div class="box box_red wrap">      </div>
+                <div class="box box_green wrap">    </div>
+                <div class="box box_blue wrap">     </div>
+                <div class="box box_yellow wrap"></div>
+            </div>
+            <h1>Order</h1>
+            <div class="menurow">
+                <div class="box box_red order3"> first(order:3)     </div>
+                <div class="box box_green order1"> second(order:1)   </div>
+                <div class="box box_blue"> third(order:0)    </div>
+                <div class="box box_yellow order2"> fourth(order:2)</div>
+            </div>
+            <h1>Complex flexbox</h1>
+            <section>
+                <article>
+                    <p>Lorem ipsum risus quam nulla arcu pellentesque eget nec mattis orci, curabitur, metus enim. Eu non sapien et quisque at amet at duis in quam. A commodo sit fusce magna gravida sapien vulputate porta leo adipiscing duis congue. Ligula bibendum gravida fusce elementum.</p> 
+                </article>               
+                <article>
+                    <p>Lorem ipsum risus quam nulla arcu pellentesque eget nec mattis orci, curabitur, metus enim. Eu non sapien et quisque at amet at duis in quam. A commodo sit fusce magna gravida sapien vulputate porta leo adipiscing duis congue. Ligula bibendum gravida fusce elementum.</p> 
+                </article>
+                <article class="art3">               
+                    <div class="divcomplex1">
+                        <button>button</button>
+                
+                        <button>button</button>
+                
+                        <button>button</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>        
+        <p>Гекман 201-322</p>            
+    </footer>
+</body>
+
+</html>

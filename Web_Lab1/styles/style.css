@@ -1,0 +1,274 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(92, 103, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background-color: rgb(92, 103, 168);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    background: linear-gradient(to bottom, #1D341D, #324532);
+    margin:0 auto;
+    padding-bottom: 50px;
+}
+
+h1{
+    text-align: center;
+    color: antiquewhite;
+    padding-top: 2%;
+}
+ h3{
+     text-align: center;
+     color: white;
+
+ }
+
+.menurowcard{
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    flex-direction: row;
+    margin: 3% auto;
+    width: 100%;
+}
+
+.menurow{
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    flex-direction: row;
+    margin: 3% auto;
+    width: 100%;
+    height: 200px;
+}
+
+.mrreverse{
+    flex-direction: row-reverse;
+}
+
+
+h2{    
+    text-align: center;
+}
+
+
+.card_row{
+    border: 2px solid black;
+    color: white;
+    width: 10%;
+    margin: auto;
+}
+.card_column{
+    border: 2px solid black;
+    color: white;
+    width: 30%;
+    margin: auto;
+}
+
+.water{
+    background-color: blue;
+}
+
+.lightning{
+    background-color: darkorchid;
+}
+
+.ground{
+    background-color: brown;
+}
+
+.wind{
+    background-color: aliceblue;
+    color: black;
+}
+
+.fire{
+    background-color:orangered;
+}
+
+.menucolumn{
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    flex-direction: column;  
+    width: 35%;
+    margin: 0 auto;
+}
+
+
+
+.squares{
+    display:flex;
+    flex-direction:row;
+}
+
+.box{  
+    margin: 0;
+    width: 100px;
+    height: 50px;
+}
+
+
+.box_red{   
+    background-color: crimson;
+}
+
+.box_green{    
+    background-color: #3abd3a;    
+    width: 200px;
+}
+
+.box_blue{
+    background-color: blue;
+    height: 100px;
+    
+}
+
+.box_yellow{
+    background-color: yellow;
+}
+
+.justify{
+    justify-content: center;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+
+.align{
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.stretch{
+    align-items: stretch;
+}
+
+.auto{
+    height: auto;
+}
+
+.align-end{
+    align-items: flex-end;
+}
+
+.selfcenter{
+    align-self: center;
+}
+
+.selfstretch{
+    align-self: stretch;
+}
+
+.width{
+    flex-grow: 1;
+    width: 120px;
+    
+} 
+
+.width{
+    flex-grow: 1;
+    width: 120px;    
+} 
+
+.width3{
+    flex-grow:3 ;       
+} 
+
+.constriction{
+    width:15%
+}
+
+.shrink3{
+    flex-shrink: 0;
+}
+
+.parent {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 3% auto;
+    flex-direction: row;
+  }
+  /* width: 100%; */
+
+.wrap{
+    width: 15;
+}
+
+.order1{
+    order:1;    
+}
+
+.order2{
+    order:2;    
+}
+
+.order3{
+    order:3;    
+}
+
+section{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    padding: 3% auto;
+    width: 100%;
+}
+
+article {
+    flex: 1 0 200px;
+}
+
+.art{
+    flex: 1  200px;
+  display: flex;  
+  
+}
+
+.divcomplex1{
+    display: flex;
+    flex-direction: column;
+  margin: 10px;
+  font-size: 18px;
+  line-height: 1.5;  
+   align-items: center;
+}
+
+button{
+    width: 20%;
+    flex: 1;
+    margin: 3%;
+    font-size: 18px;
+    line-height: 1.5;
+}
