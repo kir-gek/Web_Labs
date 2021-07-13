@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Гекман Кирилл. API</title>
+
+	<style>
+		.main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.button {
+			margin-top: 20px;
+			border: 0;
+			background-color: #222;
+			color: #fff;
+			padding: 5px 25px;
+			cursor: pointer;
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+<body>
+	<main class="main">
+		<img class="img" src="https://picsum.photos/500" alt="">
+		<button class="button">Get random img</button>
+	</main>
+
+	<script>
+		const button = document.querySelector('.button');
+		const img = document.querySelector('.img');
+
+		button.addEventListener('click', async e => {
+			const res = await fetch('https://picsum.photos/500');
+			const url = res.url;
+			img.setAttribute('src', url);
+		})
+	</script>
+</body>
+</html>
