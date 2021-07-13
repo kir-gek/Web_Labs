@@ -1,11 +1,13 @@
 $main_color:#ECECEC
-$main_font:32px
-$small_font:$main_font/1.7
-
+$fonts:(
+    main_font:32px
+    small_font:18px
+)
 @mixin flex-justify
     display: flex
     justify-content: space-between
 
+    
 body
     margin: 0
     padding: 0
@@ -21,32 +23,32 @@ header
 .font_medium
     font-family: 'Montserrat'
     font-weight: medium
-    font-size: $main_font/2
+    font-size: map-get($fonts,small_font)
 
 .font_bold
     font-family: 'Montserrat'
     font-weight:bold
-    font-size: $main_font*1.5  
+    font-size: map-get($fonts,main_font)*1.5  
 
 .font_regular
     font-family: 'Montserrat'
     font-weight:lighter
-    font-size: $main_font/2
+    font-size: map-get($fonts,small_font)
 
 .font32
-    font-size: $main_font
+    font-size: map-get($fonts,main_font)
 
 .font12
     font-size: 12px
 
 .font18
-    font-size: $small_font
+    font-size: map-get($fonts,small_font)
 
 .color33
  color: #333333 
 
 .font20
-    font-size: $small_font
+    font-size: map-get($fonts,small_font)
 
 .font24
     font-size: 24px
