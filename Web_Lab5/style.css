@@ -8,6 +8,7 @@ header{
 .container{
     width: 66%;
     margin: 0 auto;
+    padding-top: 3%;
 }
 .font_medium{
     font-family: 'Montserrat';
@@ -63,12 +64,17 @@ header{
     /* padding-top: 40px; */
 
 }
+
 .icons_item{     
     width:15%;
 }
 .icons_menu{
     padding: auto auto;    
     width: 100%;    
+}
+.telephon{
+    text-decoration: none;
+    color: #000000;
 }
 .img_icon{
     width: 100%;
@@ -498,6 +504,10 @@ header{
         background-size: cover;  
         margin-bottom: 2%;
 
+    }
+    .logo-icon{
+        width: 50%;
+        padding-left: 10%;
     }
     .prd_menu{
         flex-direction: column;
