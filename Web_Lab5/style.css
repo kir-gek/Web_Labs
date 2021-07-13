@@ -219,6 +219,14 @@ header{
     background-color:#333333;
     color: #FFFFFF;
 }
+.buy_1_button{
+    height: 100%;
+    width: 100%;
+    background-color:#333333;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+}
 .buy_2_button{
     height: 100%;
     background-color:#AD2131;
