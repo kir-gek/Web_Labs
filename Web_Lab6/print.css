@@ -1,0 +1,30 @@
+@page{
+    size: A4;
+    margin: 1cm;
+}
+*{
+    color: #000 !important;
+    background-color: #fff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+.none{
+    display: none;
+}
+.name_product{
+    font-size: 7mm;
+}
+
+.form{
+    
+    height: 1.5cm;
+}
+.product_description {
+    margin-right: 0;
+}
+.prd_menu1{
+    width: 100%;
+}
+.print_marg{
+    margin-top: 7cm;
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Adaptive maket</title>
+</head>
+<body>
+    <!-- SVG-sprite -->
+    <svg  display="none" >
+        <symbol id="facebook" viewBox="0 0 97.75 97.75">
+            <g>
+                <path d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z
+                     M67.521,24.89l-6.76,0.003c-5.301,0-6.326,2.519-6.326,6.215v8.15h12.641L67.07,52.023H54.436v32.758H41.251V52.023H30.229V39.258
+                    h11.022v-9.414c0-10.925,6.675-16.875,16.42-16.875l9.851,0.015V24.89L67.521,24.89z"/>
+            </g>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 512 512">
+            <g>
+                <path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0"/>
+            </g>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 512 512">
+            <g>
+                <path d="m370.59375 169.304688c-2.355469-6.382813-6.113281-12.160157-10.996094-16.902344-4.742187-4.882813-10.515625-8.640625-16.902344-10.996094-5.179687-2.011719-12.960937-4.40625-27.292968-5.058594-15.503906-.707031-20.152344-.859375-59.402344-.859375-39.253906 0-43.902344.148438-59.402344.855469-14.332031.65625-22.117187 3.050781-27.292968 5.0625-6.386719 2.355469-12.164063 6.113281-16.902344 10.996094-4.882813 4.742187-8.640625 10.515625-11 16.902344-2.011719 5.179687-4.40625 12.964843-5.058594 27.296874-.707031 15.5-.859375 20.148438-.859375 59.402344 0 39.25.152344 43.898438.859375 59.402344.652344 14.332031 3.046875 22.113281 5.058594 27.292969 2.359375 6.386719 6.113281 12.160156 10.996094 16.902343 4.742187 4.882813 10.515624 8.640626 16.902343 10.996094 5.179688 2.015625 12.964844 4.410156 27.296875 5.0625 15.5.707032 20.144532.855469 59.398438.855469 39.257812 0 43.90625-.148437 59.402344-.855469 14.332031-.652344 22.117187-3.046875 27.296874-5.0625 12.820313-4.945312 22.953126-15.078125 27.898438-27.898437 2.011719-5.179688 4.40625-12.960938 5.0625-27.292969.707031-15.503906.855469-20.152344.855469-59.402344 0-39.253906-.148438-43.902344-.855469-59.402344-.652344-14.332031-3.046875-22.117187-5.0625-27.296874zm-114.59375 162.179687c-41.691406 0-75.488281-33.792969-75.488281-75.484375s33.796875-75.484375 75.488281-75.484375c41.6875 0 75.484375 33.792969 75.484375 75.484375s-33.796875 75.484375-75.484375 75.484375zm78.46875-136.3125c-9.742188 0-17.640625-7.898437-17.640625-17.640625s7.898437-17.640625 17.640625-17.640625 17.640625 7.898437 17.640625 17.640625c-.003906 9.742188-7.898437 17.640625-17.640625 17.640625zm0 0"/><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm146.113281 316.605469c-.710937 15.648437-3.199219 26.332031-6.832031 35.683593-7.636719 19.746094-23.246094 35.355469-42.992188 42.992188-9.347656 3.632812-20.035156 6.117188-35.679687 6.832031-15.675781.714844-20.683594.886719-60.605469.886719-39.925781 0-44.929687-.171875-60.609375-.886719-15.644531-.714843-26.332031-3.199219-35.679687-6.832031-9.8125-3.691406-18.695313-9.476562-26.039063-16.957031-7.476562-7.339844-13.261719-16.226563-16.953125-26.035157-3.632812-9.347656-6.121094-20.035156-6.832031-35.679687-.722656-15.679687-.890625-20.6875-.890625-60.609375s.167969-44.929688.886719-60.605469c.710937-15.648437 3.195312-26.332031 6.828125-35.683593 3.691406-9.808594 9.480468-18.695313 16.960937-26.035157 7.339844-7.480469 16.226563-13.265625 26.035157-16.957031 9.351562-3.632812 20.035156-6.117188 35.683593-6.832031 15.675781-.714844 20.683594-.886719 60.605469-.886719s44.929688.171875 60.605469.890625c15.648437.710937 26.332031 3.195313 35.683593 6.824219 9.808594 3.691406 18.695313 9.480468 26.039063 16.960937 7.476563 7.34375 13.265625 16.226563 16.953125 26.035157 3.636719 9.351562 6.121094 20.035156 6.835938 35.683593.714843 15.675781.882812 20.683594.882812 60.605469s-.167969 44.929688-.886719 60.605469zm0 0"/>
+            </g>
+        </symbol>
+        <symbol id="vkontakte" viewBox="0 0 97.75 97.75">
+            <g>
+                <path d="M48.875,0C21.883,0,0,21.882,0,48.875S21.883,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.867,0,48.875,0z
+		 M73.667,54.161c2.278,2.225,4.688,4.319,6.733,6.774c0.906,1.086,1.76,2.209,2.41,3.472c0.928,1.801,0.09,3.776-1.522,3.883
+		l-10.013-0.002c-2.586,0.214-4.644-0.829-6.379-2.597c-1.385-1.409-2.67-2.914-4.004-4.371c-0.545-0.598-1.119-1.161-1.803-1.604
+		c-1.365-0.888-2.551-0.616-3.333,0.81c-0.797,1.451-0.979,3.059-1.055,4.674c-0.109,2.361-0.821,2.978-3.19,3.089
+		c-5.062,0.237-9.865-0.531-14.329-3.083c-3.938-2.251-6.986-5.428-9.642-9.025c-5.172-7.012-9.133-14.708-12.692-22.625
+		c-0.801-1.783-0.215-2.737,1.752-2.774c3.268-0.063,6.536-0.055,9.804-0.003c1.33,0.021,2.21,0.782,2.721,2.037
+		c1.766,4.345,3.931,8.479,6.644,12.313c0.723,1.021,1.461,2.039,2.512,2.76c1.16,0.796,2.044,0.533,2.591-0.762
+		c0.35-0.823,0.501-1.703,0.577-2.585c0.26-3.021,0.291-6.041-0.159-9.05c-0.28-1.883-1.339-3.099-3.216-3.455
+		c-0.956-0.181-0.816-0.535-0.351-1.081c0.807-0.944,1.563-1.528,3.074-1.528l11.313-0.002c1.783,0.35,2.183,1.15,2.425,2.946
+		l0.01,12.572c-0.021,0.695,0.349,2.755,1.597,3.21c1,0.33,1.66-0.472,2.258-1.105c2.713-2.879,4.646-6.277,6.377-9.794
+		c0.764-1.551,1.423-3.156,2.063-4.764c0.476-1.189,1.216-1.774,2.558-1.754l10.894,0.013c0.321,0,0.647,0.003,0.965,0.058
+		c1.836,0.314,2.339,1.104,1.771,2.895c-0.894,2.814-2.631,5.158-4.329,7.508c-1.82,2.516-3.761,4.944-5.563,7.471
+		C71.48,50.992,71.611,52.155,73.667,54.161z"/>
+            </g>
+        </symbol>
+    </svg>
+
+
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="header_top none">
+                    <div class="top_item font_medium top_item1">Москва</div>
+                    <div class="top_item font_medium top_item2">Обратный звонок</div>
+                    <div class="top_item font_medium top_item3"></div>               
+                    <div class="top_item font_medium top_item4">Пн-Вс 10-19</div>
+                    <div class="top_item font_medium top_item5"><a class="telephon" href="tel:84952298529"> 8 (495) 229 85 29</a></div>
+                </div>
+                <div class="header_icons">
+                    <div style=" display: flex; align-items: center;">
+                        <div></div>
+                        <div class="icons_menu font_medium icons_item none"><a class="telephon" href="#gt">Меню</a></div>
+                    </div>
+                    <div>  <p><img class="logo-icon" src="img/logos.png" alt="Логотип"></p>
+                    </div>
+                    <div class="header_icons2 none">
+                        <div class="icons_item"><a href="#gt"><img class="img_icon" src="img/exchange.svg"></a></div>
+                        <div class="icons_item"><a href="#gt"><img class="img_icon" src="img/loupe.svg"></a></div>
+                        <div class="icons_item"><a href="#gt"><img class="img_icon" src="img/shopping-cart.svg"></a></div>
+                    </div>
+                </div>
+                <div class="header_menu none">
+                    <div class="menu_item font_medium font20">Мойки</div>
+                    <div class="menu_item font_medium font20">Смесители</div>
+                    <div class="menu_item font_medium font20">Аксесуары</div>
+                    <div class="menu_item font_medium font20">Плиты</div>
+                    <div class="menu_item font_medium font20">Умывальники</div>
+                    <div class="menu_item font_medium font20">Manhattan</div>
+                    <div class="menu_item font_medium font20">Другая продукция</div>                
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="link none">
+            <div class="link_item font_regular"><a style="color:#AD2131; text-decoration: none;" href="#gt">Главная</a></div>
+            <div class="link_item font_regular" style="color:#666565; ">/</div>
+            <div class="link_item font_regular"><a style="color: #AD2131; text-decoration: none;" href="#gt"> Каталог</a></div>
+            <div class="link_item font_regular" style="color:#666565;">/</div>
+            <div class="link_item font_regular" style="color:#666565;">New York L50*40 Tapwing Comfort matt</div>
+        </div>
+
+        <div class="product">
+            <div style="grid-area: g;">
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <!-- <img class="img_seif" src="img/seif.png"> -->
+                    <picture>
+                        <source
+                        media="(max-width: 900px)"
+                        srcset="./img/seif1.png"
+                        />
+                        <img class="img_seif" src="./img/seif.png" alt="imggg" />
+                        </picture>
+
+                        
+                </div>
+                <div class="gallery none">
+                    <div class="photo_div"><img class="photo" src="img/seif1.png"></div>
+                    <div class="photo_div"><img class="photo" src="img/seif2.png"></div>
+                    <div class="photo_div"><img class="photo" src="img/seif3.png"></div>
+                    <div class="photo_div"><img class="photo" src="img/seif4.png"></div>
+                    <div class="photo_div"><img class="photo" src="img/seif4.png"></div>
+                    <div class="photo_div"><img class="photo" src="img/seif4.png"></div>
+                    <div class="photo_div"><img class="photo" src="img/seif4.png"></div>
+                    <!-- <div class="photo photo1"></div>
+                    <div class="photo photo2"></div>
+                    <div class="photo photo3"></div>
+                    <div class="photo photo4"></div>
+                    <div class="photo photo5"></div>
+                    <div class="photo photo4"></div>
+                    <div class="photo photo5"></div> -->
+                </div>
+            </div>
+            <div style="grid-area: h;" class="new_york">
+                <p class="font_bold name_product">NEW YORK L 50X40 TAPWING COMFORT MATT</p><br>
+            
+                <div class="font_medium" style="color:#666565">Производитель: Reginox</div>
+                <div class="font_medium" style="color:#666565">Артикул:44545</div>
+            </div>
+
+                
+            <div class="form" style="grid-area: j;">
+                <div class="cost1">
+
+                    <div class="font_medium font24 pading_media" style="color:#333333" >35 000 руб</div>
+                    <div class="cost2 none">
+                        <div class="icons_item_cost"><a href="#gt"><img class="img_icon" src="img/exchange.svg"></a></div>
+                        <div class="font_regular ">сравнить</div>
+                    </div>
+                    
+                </div>
+                
+                <form class="form_form none" action="/" method="">                    
+                    <select class="form_select font_regular" name="select">
+                        <option class="font_regular">Черный</option>
+                        <option selected="">Серый</option>
+                        <option>Белый</option>
+                        <option>Синий</option>
+                    </select>                    
+                <div class="quantity">
+                    <div class="quantity_1 font_regular">Kоличество </div>
+                    <div class="quantity_2 width_10"><button type="button" class="quantity_2 quantity_button">-</button></div>
+                    <div class="quantity_counter width_10 font_regular">1</div>
+                    <div class="quantity_2 width_10"><button type="button" class="quantity_2 quantity_button">+</button></div>
+
+                </div>
+                <div class="buy">
+                    <div class="buy_1 font_regular"><button  class="buy_1_button" type="button">Купить в один клик</button></div>
+                     <div class="buy 2"style="width: 30%;"><button class="buy_2_button" type="button"><img class="img_buy" src="img/shopping-cart.svg"></button></div>
+                </div>
+               </form>
+
+            </div>
+        </div>
+
+        <div class="product_description">
+            <div class="prd_menu">
+                <div class="color_prd font_medium font20"><a class="color_prd none_decoration font_medium font20" href="#gt">Характеристики</a></div>
+                <div class="color_prd font_medium font20 none"><a class="color_prd none_decoration font_medium font20" href="#gt">Отзывы</a></div>
+                <div class="color_prd font_medium font20 none"><a class="color_prd none_decoration font_medium font20" href="#gt">Задать вопрос</a></div>
+            </div>
+          
+            <div class="prd_des">
+                <div class="prd_menu1">
+                    <div class="prddmi prd_menu1_item">Вид монтажа:</div>
+                    <div class="prddmi prd_menu1_item2">В один уровень со столешницей</div>
+
+                    <div class="prddmi prd_menu1_item">Глубина чаши:</div>
+                    <div class="prddmi prd_menu1_item2">200мм</div>
+
+                    <div class="prddmi prd_menu1_item">Диаметр сливного отверстия:</div>
+                    <div class="prddmi prd_menu1_item2">3.5"(OKG)</div>
+
+                    <div class="prddmi prd_menu1_item">Материал:</div>
+                    <div class="prddmi prd_menu1_item2">гранит</div>
+
+                    <div class="prddmi prd_menu1_item">Размер мойки:</div>
+                    <div class="prddmi prd_menu1_item2">550мм x 450мм</div>
+
+                    <div class="prddmi prd_menu1_item">Размер чаши:</div>
+                    <div class="prddmi prd_menu1_item2">500мм x 400мм</div>
+
+                    <div class="prddmi prd_menu1_item">Старана:</div>
+                    <div class="prddmi prd_menu1_item2">Нидерланды</div>
+
+                    <div class="prddmi prd_menu1_item">Цвет покрытия:</div>
+                    <div class="prddmi prd_menu1_item2">Черный</div>
+
+                    <div class="prddmi prd_menu1_item">Ширина тумбы:</div>
+                    <div class="prddmi prd_menu1_item2">500мм</div>
+
+                </div>
+                    
+            </div>
+        </div>
+
+
+
+        <h2 class="font_bold font32 none">РЕКОМЕНДУЕМ</h2>
+        <div class="recommendation none">
+            <div class="recomend_item recommendation_item1"><div class="recomend_text">Системы хранения Manhattan</div></div>
+            <div class="recomend_item recommendation_item2"><div class="recomend_text">Аксессуары</div></div>
+            <div class="recomend_item recommendation_item3"><div class="recomend_text">Столешницы</div></div>
+        </div>
+        <h2 class="font_bold font32 print_marg">ПОХОЖИЕ ТОВАРЫ</h2>
+        <div class="sameproducts">
+            <div class="sameproducts_item">
+                <div class="sameproducts_item_start"><img class="img_same"  src="img/same1.png"></div>
+                <div class="sameproducts_item_end">
+                    <div class="spie1 font_bold font18">Amsterdam 25 Dark chocolate</div>
+                    <div class="spie2 font_regular font20">9 950 руб</div>
+                </div>
+            </div>
+            <div class="sameproducts_item">
+                <div class="sameproducts_item_start"><img class="img_same"  src="img/same2.png"></div>
+                <div class="sameproducts_item_end">
+                    <div class="spie1 font_bold font18">Yadkin k1065K black</div>
+                    <div class="spie2 font_regular font20">31 000 руб</div>
+                </div>
+            </div>
+            <div class="sameproducts_item">
+                <div class="sameproducts_item_start"><img class="img_same"  src="img/same3.png"></div>
+                <div class="sameproducts_item_end">
+                    <div class="spie1 font_bold font18">Diplomat R 20lux</div>
+                    <div class="spie2 font_regular font20">17 000 руб</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer_menu none">
+                <div class="footer_menu_item">
+                    <h3 class="font_bold font24 color33">О компании</h3>
+                    <div></div>
+                    <div class="fmi_item"><a href="#gt">Почему мы</a></div>
+                    <div class="fmi_item"><a href="#gt">Наши партнеры</a></div>
+                    <div class="fmi_item"><a href="#gt">Сертификаты и гарантии</a></div>
+                    <div class="fmi_item"><a href="#gt">Статьи</a></div>
+                    <div class="fmi_item"><a href="#gt">Информация</a></div>
+                    <div class="fmi_item"><a href="#gt">Каталоги</a></div>
+                    <div class="fmi_item"><a href="#gt">Доставка и оплата</a></div>
+                    <div class="fmi_item"><a href="#gt">Контакты</a></div>
+                </div>
+                <div class="footer_menu_item">
+                    <h3 class="font_bold font24 color33">Каталог</h3>
+                    <div></div>
+                    <div class="fmi_item"><a href="#gt">Мойки</a></div>
+                    <div class="fmi_item"><a href="#gt">Смесители</a></div>
+                    <div class="fmi_item"><a href="#gt">Аксессуары</a></div>
+                    <div class="fmi_item"><a href="#gt">Плиты</a></div>
+                    <div class="fmi_item"><a href="#gt">Умывальники</a></div>
+                    <div class="fmi_item"><a href="#gt">Столешницы</a></div>
+                    <div class="fmi_item"><a href="#gt">Системы хранения Manhattan</a></div>
+                    <div class="fmi_item"><a href="#gt">Измельчители Bone Crusher</a></div>
+                    <div class="fmi_item"><a href="#gt">Другая продукция</a></div>
+                </div>
+                <div class="footer_menu_item color33">
+                    <h3 class="font_bold font24">Бренды</h3>
+                    <div class="fmi_item"><a href="#gt">Reginox</a></div>
+                    <div class="fmi_item"><a href="#gt">Rodi</a></div>
+                    <div class="fmi_item"><a href="#gt">Whinstone</a></div>
+                    <div class="fmi_item"><a href="#gt">Rerih</a></div>
+                    <div class="fmi_item"><a href="#gt">Status</a></div>
+                    <div class="fmi_item"><a href="#gt">Bone Crusher</a></div>
+                    <div class="fmi_item"><a href="#gt">Armando Vicario</a></div>
+                    <div class="fmi_item"><a href="#gt">Webert</a></div>
+                    <div class="fmi_item"><a href="#gt">Effepi</a></div>
+                    <div class="fmi_item"><a href="#gt">Gionna Bagno</a></div>
+                    <div class="fmi_item"><a href="#gt">Аквафор</a></div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="footer_up_end">
+                <div class="container">
+                    <div class="footer_end">
+                        <div style="grid-area: af;">                
+                            <img src="img/foot1.png">
+                        </div>
+                        <div class="footer_end_item"  style="grid-area: bf;">
+                            <img src="img/PRHolding logo.svg">
+                        </div>
+                        <div class="footer_end_item social_networks" style="grid-area: cf;">
+                            <svg class="social_networks_icon">
+                                <use href="#facebook" ></use>        
+                            </svg>
+                            <svg class="social_networks_icon">
+                                <use href="#twitter" ></use>
+                            </svg>
+                            <svg class="social_networks_icon">
+                                <use href="#instagram" ></use>
+                            </svg>
+                            <svg class="social_networks_icon">
+                                <use href="#vkontakte" ></use>
+                            </svg>
+                        </div>
+                        <div class="footer_column footer_end_item" style="grid-area: df;">
+                            <img class="footer_column_img" src="img/foot4.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="end_end">
+                    <div class="font_medium font12" style="color:#666565;"><a href="#gt">Политика конфенденциальности</a></div>
+                    <div class="font12 font_medium ennnnd" style="color:#666565;"><a href="#gt">2020 © Reginox-shop</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
